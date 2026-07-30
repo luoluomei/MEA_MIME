@@ -45,7 +45,6 @@ The command-line loader supports:
 - `Arxiv`
 - `Products`
 - `Amazon-ratings`
-- `Squirrel`
 
 For `Products`, the code uses the front-200K induced subgraph by OGB node order as the working graph.
 
