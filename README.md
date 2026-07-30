@@ -73,42 +73,6 @@ Run Products with the front-200K working graph:
 python run_mime.py --dataset Products --c 20 --seed 42 --device cuda
 ```
 
-## Python API
-
-```python
-from mime_steal import MIMEConfig, run_mime
-
-config = MIMEConfig(
-    root="./data",
-    prior_ratio=0.10,
-    device="cuda",
-    eval_scope="visible",  # or "full"
-)
-
-result = run_mime(dataset="CoCS", c=20, seed=42, config=config)
-print(result)
-```
-
-The result dictionary includes accuracy, fidelity, number of queried nodes, runtime breakdown, and memory usage.
-
-## Evaluation scope
-
-The default setting is:
-
-```bash
---eval-scope visible
-```
-
-This evaluates the surrogate on unqueried nodes inside the attacker-visible partial attributed graph, so the surrogate is never given the provider-side full graph during evaluation.
-
-For compatibility with older transductive experimental runners, you can use:
-
-```bash
---eval-scope full
-```
-
-This evaluates the learned surrogate weights on the full graph test mask. The attack still queries only nodes from the attacker-visible partial graph.
-
 ## Main command-line arguments
 
 ```bash
