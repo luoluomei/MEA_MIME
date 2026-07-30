@@ -6,8 +6,6 @@ This repository contains a modular implementation of **MIME** for partial-view, 
 2. entropy-diversity query selection under a node-level hard-label budget,
 3. topology-regularized surrogate refinement with a Laplacian prediction penalty.
 
-The code is refactored from the original standalone runner into reusable Python modules. It removes baseline methods and extra experimental sweeps, so each run only executes MIME on one dataset, one query budget, and one random seed.
-
 ## Repository structure
 
 ```text
